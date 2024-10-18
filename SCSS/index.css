@@ -207,7 +207,7 @@ body main #one {
   display: flex;
   align-items: center;
   margin-bottom: 10rem;
-  background: url("../../images/bg-curve-desktop.svg");
+  background: url("../images/bg-curve-desktop.svg");
   background-position: bottom;
   background-size: contain;
   padding-bottom: 8rem;
@@ -226,29 +226,29 @@ body main #one div form input {
   font-family: "Raleway";
   font-size: 0.9rem;
 }
-body main #one div form input[type="email"] {
+body main #one div form input[type=email] {
   width: 20rem;
   height: 2.8rem;
   padding-left: 1rem;
   margin-right: 1rem;
 }
-body main #one div form input[type="email"]:invalid {
+body main #one div form input[type=email]:invalid {
   border: 1px solid red;
 }
-body main #one div form input[type="email"]:invalid + p {
+body main #one div form input[type=email]:invalid ~ p {
   display: block;
 }
-body main #one div form input[type="email"]:focus {
+body main #one div form input[type=email]:focus {
   outline: none;
 }
-body main #one div form input[type="submit"] {
+body main #one div form input[type=submit] {
   width: 12rem;
   background-color: var(--bright-blue);
   color: white;
   border: none;
   font-weight: 500;
 }
-body main #one div form input[type="submit"]:hover {
+body main #one div form input[type=submit]:hover {
   opacity: 0.7;
   cursor: pointer;
 }
@@ -340,17 +340,17 @@ body main #three input {
   font-size: 0.9rem;
   box-shadow: 0 0 0.4rem 0.1rem rgba(82, 76, 76, 0.5);
 }
-body main #three input[type="email"] {
+body main #three input[type=email] {
   width: clamp(15rem, 30vw, 35rem);
   height: 2.8rem;
   padding-left: 1rem;
   margin-bottom: 2rem;
   border: none;
 }
-body main #three input[type="email"]:focus {
+body main #three input[type=email]:focus {
   outline: none;
 }
-body main #three input[type="submit"] {
+body main #three input[type=submit] {
   width: clamp(15rem, 12vw, 30rem);
   background-color: var(--bright-blue);
   color: white;
@@ -358,7 +358,7 @@ body main #three input[type="submit"] {
   font-weight: 500;
   display: block;
 }
-body main #three input[type="submit"]:hover {
+body main #three input[type=submit]:hover {
   background-color: #628af9;
   cursor: pointer;
 }
@@ -405,7 +405,7 @@ body main #four #footFour img:hover {
 }
 
 @media screen and (min-width: 450px) and (max-width: 1198px) {
-  body main #one form input[type="submit"] {
+  body main #one form input[type=submit] {
     margin-top: 1rem;
   }
 }
@@ -443,7 +443,7 @@ body main #four #footFour img:hover {
     flex-direction: column-reverse;
   }
   body main #two::before {
-    content: url("../../images/bg-curve-mobile.svg");
+    content: url("../images/bg-curve-mobile.svg");
     left: 0rem;
     top: -2rem;
   }
