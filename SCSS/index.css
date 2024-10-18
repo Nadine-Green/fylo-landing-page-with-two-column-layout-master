@@ -1,0 +1,468 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  transition: 0.3s ease-in-out;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+nav ul {
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+:root {
+  --very-dark-blue: hsl(243, 87%, 12%);
+  --desaturated-blue: hsl(238, 22%, 44%);
+  --bright-blue: hsl(224, 93%, 58%);
+  --moderate-cyan: hsl(170, 45%, 43%);
+  --light-grayish-blue: hsl(240, 75%, 98%);
+  --light-gray: hsl(0, 0%, 75%);
+}
+
+body {
+  font-family: Raleway;
+  overflow-x: hidden;
+}
+body h1 {
+  font-size: clamp(1rem, 5vw, 2rem);
+  font-family: "Open Sans";
+  color: var(--very-dark-blue);
+}
+body p {
+  font-family: Raleway;
+}
+body main {
+  width: 100vw;
+}
+body main section {
+  padding: 0 2rem;
+}
+body main #head {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5rem;
+}
+body main #head ul {
+  display: flex;
+  list-style-type: none;
+  gap: 3rem;
+}
+body main #head ul a {
+  color: black;
+  font-weight: 500;
+}
+body main #one {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10rem;
+  background: url("../../images/bg-curve-desktop.svg");
+  background-position: bottom;
+  background-size: contain;
+  padding-bottom: 8rem;
+  background-repeat: no-repeat;
+}
+body main #one img {
+  width: 50vw;
+}
+body main #one div p {
+  margin: 1.5rem 0;
+  max-width: 33rem;
+  font-weight: 600;
+}
+body main #one div form input {
+  height: 2.8rem;
+  font-family: "Raleway";
+  font-size: 0.9rem;
+}
+body main #one div form input[type="email"] {
+  width: 20rem;
+  height: 2.8rem;
+  padding-left: 1rem;
+  margin-right: 1rem;
+}
+body main #one div form input[type="email"]:invalid {
+  border: 1px solid red;
+}
+body main #one div form input[type="email"]:invalid + p {
+  display: block;
+}
+body main #one div form input[type="email"]:focus {
+  outline: none;
+}
+body main #one div form input[type="submit"] {
+  width: 12rem;
+  background-color: var(--bright-blue);
+  color: white;
+  border: none;
+  font-weight: 500;
+}
+body main #one div form input[type="submit"]:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+body main #two {
+  position: relative;
+  margin-top: -10rem;
+  padding-bottom: 5rem;
+  background-color: var(--light-grayish-blue);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+body main #two h1 {
+  margin-bottom: 2rem;
+}
+body main #two img:not(#kyle) {
+  width: 40vw;
+}
+body main #two div p {
+  max-width: 33rem;
+  margin-bottom: 1.5rem;
+}
+body main #two div a {
+  color: var(--moderate-cyan);
+  width: 10.5rem;
+  display: block;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid var(--moderate-cyan);
+  position: relative;
+}
+body main #two div a::after {
+  content: url("../../images/icon-arrow.svg");
+  position: absolute;
+  right: 0rem;
+  top: 0.1rem;
+}
+body main #two div a:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+body main #two div #test {
+  box-shadow: 0 0 0.8rem 0.1rem rgba(191, 191, 191, 0.5);
+  background-color: white;
+  max-width: 23rem;
+  padding: 1rem;
+}
+body main #two div #test > div {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+body main #two div #test > div img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+body main #two div #test > div div {
+  align-self: flex-end;
+  line-height: 0;
+  margin-top: 0.3rem;
+}
+body main #two div #test > div div p:first-child {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+body main #two div #test > div div p:last-child {
+  font-size: 0.8rem;
+}
+body main #three {
+  background-color: var(--desaturated-blue);
+  padding: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+body main #three div {
+  color: white;
+}
+body main #three div h1 {
+  margin-bottom: 1rem;
+  color: white;
+}
+body main #three div p {
+  max-width: 30rem;
+}
+body main #three input {
+  height: 2.8rem;
+  font-family: "Raleway";
+  font-size: 0.9rem;
+  box-shadow: 0 0 0.4rem 0.1rem rgba(82, 76, 76, 0.5);
+}
+body main #three input[type="email"] {
+  width: clamp(15rem, 30vw, 35rem);
+  height: 2.8rem;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+  border: none;
+}
+body main #three input[type="email"]:focus {
+  outline: none;
+}
+body main #three input[type="submit"] {
+  width: clamp(15rem, 12vw, 30rem);
+  background-color: var(--bright-blue);
+  color: white;
+  border: none;
+  font-weight: 500;
+  display: block;
+}
+body main #three input[type="submit"]:hover {
+  background-color: #628af9;
+  cursor: pointer;
+}
+body main #four {
+  background-color: var(--very-dark-blue);
+  padding: 5rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+body main #four a:hover {
+  color: var(--desaturated-blue);
+}
+body main #four #footOne {
+  line-height: 3rem;
+}
+body main #four #footOne p:nth-of-type(1):before {
+  content: url("../../images/icon-phone.svg");
+  margin-right: 1rem;
+}
+body main #four #footOne p:nth-of-type(2):before {
+  content: url("../../images/icon-email.svg");
+  margin-right: 1rem;
+}
+body main #four .contact {
+  display: block;
+  color: white;
+  margin-bottom: 1rem;
+}
+body main #four #footFour {
+  display: flex;
+  gap: 1rem;
+}
+body main #four #footFour img {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+body main #four #footFour img:hover {
+  cursor: pointer;
+  border: 1px solid var(--desaturated-blue);
+}
+
+@media screen and (min-width: 450px) and (max-width: 1198px) {
+  body main #one form input[type="submit"] {
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 449px) {
+  body h1 {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  body main #head {
+    margin-bottom: 5rem;
+  }
+  body main #head img {
+    width: 30vw;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  body main #head ul {
+    gap: 1rem;
+  }
+  body main #one {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  body main #one form {
+    display: none;
+  }
+  body main #one #button {
+    width: 12rem;
+    background-color: var(--bright-blue);
+    color: white;
+    border: none;
+    font-weight: 500;
+  }
+  body main #two {
+    flex-direction: column-reverse;
+  }
+  body main #two::before {
+    content: url("../../images/bg-curve-mobile.svg");
+    left: 0rem;
+    top: -2rem;
+  }
+  body main #two #see {
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  body main #three {
+    flex-direction: column;
+    align-items: center;
+  }
+  body main #three p {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  body main #four {
+    flex-direction: column;
+  }
+  body main #four div {
+    margin-bottom: 1rem;
+  }
+}

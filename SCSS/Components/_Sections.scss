@@ -1,0 +1,363 @@
+body {
+  font-family: Raleway;
+  //background-color: aqua;
+  overflow-x: hidden;
+  h1 {
+    font-size: clamp(1rem, 5vw, 2rem);
+    font-family: "Open Sans";
+    color: var(--very-dark-blue);
+  }
+
+  p {
+    font-family: Raleway;
+  }
+  main {
+    width: 100vw;
+    //background-color: red;
+    section {
+      padding: 0 2rem;
+    }
+    #head {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 5rem;
+
+      ul {
+        display: flex;
+        list-style-type: none;
+        gap: 3rem;
+
+        a {
+          color: black;
+          font-weight: 500;
+        }
+      }
+    }
+
+    #one {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10rem;
+      background: url("../../images/bg-curve-desktop.svg");
+      background-position: bottom;
+      background-size: contain;
+      padding-bottom: 8rem;
+      background-repeat: no-repeat;
+
+      img {
+        width: 50vw;
+      }
+
+      div {
+        p {
+          margin: 1.5rem 0;
+          max-width: 33rem;
+          font-weight: 600;
+        }
+
+        form {
+          input {
+            height: 2.8rem;
+            font-family: "Raleway";
+            font-size: 0.9rem;
+
+            &[type="email"] {
+              width: clamp(5rem, 20rem, 27rem);
+              height: 2.8rem;
+              padding-left: 1rem;
+              margin-right: 1rem;
+
+              &:invalid {
+                border: 1px solid red;
+
+                & ~ p {
+                  display: block;
+                }
+              }
+
+              &:focus {
+                outline: none;
+              }
+            }
+            &[type="submit"] {
+              width: clamp(2rem, 12rem, 30rem);
+              background-color: var(--bright-blue);
+              color: white;
+              border: none;
+              font-weight: 500;
+
+              &:hover {
+                //background-color: var(--desaturated-blue);
+                opacity: 0.7;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #two {
+      position: relative;
+      margin-top: -10rem;
+      padding-bottom: 5rem;
+      background-color: var(--light-grayish-blue);
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      h1 {
+        margin-bottom: 2rem;
+      }
+      img:not(#kyle) {
+        width: 40vw;
+      }
+
+      div {
+        p {
+          max-width: 33rem;
+          margin-bottom: 1.5rem;
+        }
+
+        a {
+          color: var(--moderate-cyan);
+          width: 10.5rem;
+          display: block;
+          margin-bottom: 1.5rem;
+          padding-bottom: 0.2rem;
+          border-bottom: 1px solid var(--moderate-cyan);
+          position: relative;
+
+          &::after {
+            content: url("../../images/icon-arrow.svg");
+            position: absolute;
+            right: 0rem;
+            top: 0.1rem;
+          }
+
+          &:hover {
+            //background-color: var(--desaturated-blue);
+            opacity: 0.6;
+            cursor: pointer;
+          }
+        }
+
+        #test {
+          box-shadow: 0 0 0.8rem 0.1rem rgba(191, 191, 191, 0.5);
+          background-color: white;
+          max-width: 23rem;
+          padding: 1rem;
+
+          > div {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            img {
+              width: 2rem;
+              height: 2rem;
+              border-radius: 50%;
+            }
+
+            div {
+              align-self: flex-end;
+              line-height: 0;
+              margin-top: 0.3rem;
+              p:first-child {
+                font-size: 0.9rem;
+                font-weight: bold;
+              }
+              p:last-child {
+                font-size: 0.8rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #three {
+      background-color: var(--desaturated-blue);
+      padding: 5rem;
+      display: flex;
+      justify-content: space-between;
+
+      div {
+        color: white;
+        h1 {
+          margin-bottom: 1rem;
+          color: white;
+        }
+        p {
+          max-width: 30rem;
+        }
+      }
+
+      input {
+        height: 2.8rem;
+        font-family: "Raleway";
+        font-size: 0.9rem;
+        box-shadow: 0 0 0.4rem 0.1rem rgba(82, 76, 76, 0.5);
+
+        &[type="email"] {
+          width: clamp(15rem, 30vw, 35rem);
+          height: 2.8rem;
+          padding-left: 1rem;
+          margin-bottom: 2rem;
+          border: none;
+
+          &:focus {
+            outline: none;
+          }
+        }
+        &[type="submit"] {
+          width: clamp(15rem, 12vw, 30rem);
+          background-color: var(--bright-blue);
+          color: white;
+          border: none;
+          font-weight: 500;
+          display: block;
+
+          &:hover {
+            background-color: lighten(hsl(224, 93%, 58%), 10%);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    #four {
+      background-color: var(--very-dark-blue);
+      padding: 5rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+
+      a:hover {
+        color: var(--desaturated-blue);
+      }
+
+      #footOne {
+        line-height: 3rem;
+        p:nth-of-type(1):before {
+          content: url("../../images/icon-phone.svg");
+          margin-right: 1rem;
+        }
+
+        p:nth-of-type(2):before {
+          content: url("../../images/icon-email.svg");
+          margin-right: 1rem;
+        }
+      }
+
+      .contact {
+        display: block;
+        color: white;
+        margin-bottom: 1rem;
+      }
+
+      #footFour {
+        display: flex;
+        gap: 1rem;
+        img {
+          width: 2rem;
+          height: 2rem;
+          border: 1px solid white;
+          border-radius: 50%;
+          padding: 0.5rem;
+
+          &:hover {
+            cursor: pointer;
+            border: 1px solid var(--desaturated-blue);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 1198px) {
+  body {
+    main {
+      #one {
+        form {
+          input {
+            &[type="submit"] {
+              margin-top: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 449px) {
+  body {
+    h1 {
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    main {
+      #head {
+        margin-bottom: 5rem;
+
+        img {
+          width: 30vw;
+          height: fit-content;
+        }
+
+        ul {
+          gap: 1rem;
+        }
+      }
+      #one {
+        flex-direction: column-reverse;
+        text-align: center;
+        form {
+          display: none;
+        }
+        #button {
+          width: clamp(2rem, 12rem, 30rem);
+          background-color: var(--bright-blue);
+          color: white;
+          border: none;
+          font-weight: 500;
+        }
+      }
+
+      #two {
+        flex-direction: column-reverse;
+
+        &::before {
+          content: url("../../images/bg-curve-mobile.svg");
+          left: 0rem;
+          top: -2rem;
+        }
+
+        #see {
+          margin: auto;
+          margin-bottom: 2rem;
+        }
+      }
+
+      #three {
+        flex-direction: column;
+        align-items: center;
+
+        p {
+          text-align: center;
+          margin-bottom: 1rem;
+        }
+      }
+
+      #four {
+        flex-direction: column;
+
+        div {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
